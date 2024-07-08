@@ -13,11 +13,11 @@ aws_access_key=os.getenv("aws_access_key")
 aws_secret_access_key=os.getenv("aws_secret_access_key")
 aws_s3_bucket=os.getenv("aws_s3_bucket")
 
-print(aws_access_key)
 
 # extracting the online transaction data from the tables in th database
 ot_transformed=extract_transactional_data()
 print(ot_transformed.shape)
+
 
 #remove the duplicates
 ot_wout_duplicates=identify_and_remove_duplicates(ot_transformed)
